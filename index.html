@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LuxRide - Luxury Car In Here</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background: linear-gradient(120deg, #0e0e0e, #1a1a1a),
+          url("https://www.transparenttextures.com/patterns/carbon-fibre.png");
+        background-blend-mode: overlay;
+        background-repeat: repeat;
+        color: #fff;
+        line-height: 1.6;
+      }
+
+      nav {
+        background: #111;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 30px;
+        position: sticky;
+        top: 0;
+        z-index: 99;
+        border-bottom: 1px solid #333;
+      }
+
+      nav a {
+        color: gold;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      nav a:hover {
+        color: white;
+      }
+
+      section {
+        padding: 80px 20px;
+        max-width: 1000px;
+        margin: auto;
+      }
+
+      #home {
+        text-align: center;
+      }
+
+      #home h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+        color: gold;
+      }
+
+      #home p {
+        font-size: 18px;
+        color: #aaa;
+      }
+
+      .car-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
+
+      .car {
+        background: #1a1a1a;
+        padding: 20px;
+        border-radius: 12px;
+        transition: 0.3s;
+      }
+
+      .car:hover {
+        transform: translateY(-5px);
+        background: #222;
+      }
+
+      .car img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+
+      .car h3 {
+        margin-top: 15px;
+        font-size: 20px;
+        color: gold;
+      }
+
+      .car p {
+        color: #ccc;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 30px;
+      }
+
+      input,
+      select,
+      textarea,
+      button {
+        padding: 10px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+      }
+
+      input,
+      select,
+      textarea {
+        background: #222;
+        color: #fff;
+      }
+
+      button {
+        background: gold;
+        color: #000;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        background: white;
+        color: black;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        background: #111;
+        color: #888;
+      }
+
+      h2 {
+        text-align: center;
+        color: gold;
+        margin-bottom: 20px;
+      }
+
+      #faq h4 {
+        margin-top: 20px;
+        color: gold;
+      }
+
+      #faq p {
+        color: #ccc;
+      }
+
+      #galeri {
+        padding: 60px 20px;
+        background: #111;
+        color: #fff;
+        text-align: center;
+      }
+
+      .galeri-scroll {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 20px;
+        padding: 20px 0;
+      }
+
+      .galeri-scroll img {
+        flex: 0 0 auto;
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+        scroll-snap-align: start;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#katalog">Katalog</a>
+      <a href="#preorder">Pre-Order</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#testimoni">Testimoni</a>
+      <a href="#faq">FAQ</a>
+      <a href="#galeri">galery</a>
+      <a href="#contact">Kontak</a>
+    </nav>
+
+    <!-- Home -->
+    <section id="home">
+      <h1>LuxRide</h1>
+      <p>Drive the Dream. Temukan mobil mewah impian anda di sini.</p>
+    </section>
+
+    <!-- Katalog -->
+    <section id="katalog">
+      <h2>Katalog Mobil Mewah</h2>
+      <div class="car-list">
+        <div class="car">
+          <img src="lambo.jpg" alt="Lamborghini" />
+          <h3>Lamborghini Aventador</h3>
+          <p>Rp 12.000.000.000</p>
+        </div>
+        <div class="car">
+          <img src="Ferrari.jpg" alt="Ferrari" />
+          <h3>Ferrari 488 Spider</h3>
+          <p>Rp 10.500.000.000</p>
+        </div>
+        <div class="car">
+          <img src="rolls.jpg" alt="Rolls" />
+          <h3>Rolls Royce Phantom</h3>
+          <p>Rp 18.000.000.000</p>
+        </div>
+        <div class="car">
+          <img src="bugatti.jpg" alt="Bugatti" />
+          <h3>Bugatti Chiron</h3>
+          <p>Rp 35.000.000.000</p>
+        </div>
+        <div class="car">
+          <img src="mclaren.jpg" alt="McLaren" />
+          <h3>McLaren 720S</h3>
+          <p>Rp 8.700.000.000</p>
+        </div>
+        <div class="car">
+          <img src="bentley.jpg" alt="Bentley" />
+          <h3>Bentley Continental GT</h3>
+          <p>Rp 9.000.000.000</p>
+        </div>
+        <div class="car">
+          <img src="bmw.jpg" alt="BMW" />
+          <h3>BMW M8 Gran Coupé</h3>
+          <p>Rp 5.500.000.000</p>
+        </div>
+        <div class="car">
+          <img src="porsche.jpg" alt="Porsche" />
+          <h3>Porsche 911 Turbo S</h3>
+          <p>Rp 6.500.000.000</p>
+        </div>
+        <div class="car">
+          <img src="aston.jpg" alt="Aston Martin" />
+          <h3>Aston Martin DB11</h3>
+          <p>Rp 10.500.000.000</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="preorder">
+      <h2>Pre-Order Mobil Impian Anda</h2>
+      <p
+        style="
+          text-align: center;
+          color: #ccc;
+          max-width: 700px;
+          margin: 20px auto;
+        "
+      >
+        Ga nemu mobil impian anda di katalog? Santuy bro, tinggal isi form ini
+        aja, nanti tim kita bantuin cariin dari seluruh dunia.
+      </p>
+      <form>
+        <input type="text" placeholder="Nama Lengkap" required />
+        <input type="email" placeholder="Email Aktif" required />
+        <input type="text" placeholder="Nama Mobil yang Diinginkan" required />
+        <textarea
+          rows="4"
+          placeholder="Spesifikasi tambahan (warna, interior, dll)..."
+        ></textarea>
+        <button type="submit">Kirim Permintaan PO</button>
+        <p
+          style="
+            font-size: 0.9em;
+            text-align: center;
+            color: #aaa;
+            margin-top: 10px;
+          "
+        >
+          Estimasi proses PO: 3-6 bulan kerja setelah konfirmasi pembayaran,
+          tergantung kelangkaan mobilnya. Tapi kami usahain dapat secepatnya.
+        </p>
+      </form>
+    </section>
+
+    <section id="tentang">
+      <h2>Tentang LuxRide</h2>
+      <p
+        style="
+          max-width: 800px;
+          margin: 30px auto;
+          text-align: center;
+          color: #ccc;
+        "
+      >
+        LuxRide adalah dealer mobil mewah terkemuka yang menyediakan berbagai
+        jenis supercar dan luxury car dari brand-brand ternama dunia. Kami
+        berdiri sejak 2015 dan telah membantu lebih dari 1000 sultan mendapatkan
+        mobil impiannya. Mulai dari Lamborghini, Ferrari, sampai Rolls Royce,
+        semua ada di sini.
+      </p>
+    </section>
+
+    <section id="testimoni">
+      <h2>Apa Kata Sultan-Sultan Kami?</h2>
+      <div class="car-list">
+        <div class="car">
+          <p>
+            "Pelayanan mantap! Gue beli Aventador, 3 hari langsung dianter ke
+            rumah. Gokil sih."
+          </p>
+          <h4>- Reza Arap, Jakarta Selatan</h4>
+        </div>
+        <div class="car">
+          <p>
+            "Kesan eksklusifnya dapet banget. Interior showroom-nya aja udah
+            kayak hotel bintang lima."
+          </p>
+          <h4>- Cindy Angelica, BSD City</h4>
+        </div>
+        <div class="car">
+          <p>
+            "Gw beli Rolls Royce buat bokap, pelayanannya ramah dan prosesnya
+            cepet. sangat-sangat rekomended"
+          </p>
+          <h4>- Dimas Prasetya, Pantai Indah Kapuk</h4>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <h2>Pertanyaan yang Sering Ditanyain</h2>
+      <div style="max-width: 800px; margin: auto; color: #ccc">
+        <h4>Apakah mobil bisa dikirim ke luar kota?</h4>
+        <p>
+          Bisa dong! Kita kerja sama sama jasa logistik premium, jadi aman sampe
+          tujuan.
+        </p>
+
+        <h4>Bisa test drive dulu sebelum beli?</h4>
+        <p>
+          Tentu aja bisa. Langsung booking lewat WhatsApp, nanti lo dijadwalin
+          test drive eksklusif.
+        </p>
+
+        <h4>Sistem pembayaran bisa cicilan ga?</h4>
+        <p>
+          Bisa bro, kita kerja sama sama leasing kayak Mandiri Tunas Finance,
+          BCA Finance, dll.
+        </p>
+      </div>
+    </section>
+
+    <section id="galeri">
+      <h2>Galeri Mobil Mewah</h2>
+      <div class="galeri-scroll">
+        <img src="gambar1.jpeg" alt="Mobil 1">
+        <img src="gambar2.jpg" alt="Mobil 2">
+        <img src="gambar3.jpg" alt="Mobil 3">
+        <img src="gambar4.jpg" alt="Mobil 4">
+        <img src="gambar5.jpg" alt="Mobil 5">
+        <img src="gambar6.jpg" alt="Mobil 6">
+        <img src="gambar7.jpg" alt="Mobil 7">
+      </div>
+    </section>
+    
+
+    <section id="contact">
+      <h2>Hubungi Kami</h2>
+      <form>
+        <input type="text" placeholder="Nama Lengkap" required />
+        <input type="email" placeholder="Email Aktif" required />
+        <select required>
+          <option disabled selected>Pilih Mobil</option>
+          <option>Lamborghini Aventador</option>
+          <option>Ferrari 488 Spider</option>
+          <option>Rolls Royce Phantom</option>
+          <option>Bugatti Chiron</option>
+          <option>McLaren 720S</option>
+          <option>Bentley Continental GT</option>
+          <option>BMW M8 Gran Coupé</option>
+          <option>Porsche 911 Turbo S</option>
+          <option>Astom Martin DB11</option>
+        </select>
+        <textarea rows="5" placeholder="Pesan atau catatan..."></textarea>
+        <button type="submit">Kirim</button>
+      </form>
+    </section>
+
+    <footer>&copy; 2025 LuxRide. All rights reserved.</footer>
+  </body>
+</html>
